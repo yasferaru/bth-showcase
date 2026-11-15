@@ -105,7 +105,7 @@ rehabilitation: hardware and software that learn the individual patient. It star
 
 ## Team
 
-Solo founder. Yasmyna Feraru, student of medicine and computer engineering in Italy.
+Solo project by Yasmyna Feraru.
 
 ## Contact
 
