@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Three safety layers</title>
+  <rect width="760" height="300" rx="12" fill="#ffffff"/>
+  <text x="380" y="32" text-anchor="middle" font-size="19" font-weight="600" fill="#111827">Three safety layers</text>
+
+  <rect x="40" y="52" width="680" height="72" rx="10" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="64" y="80" font-size="15" font-weight="600" fill="#4c1d95">3 · People</text>
+  <text x="64" y="104" font-size="13" fill="#4c1d95">Mandatory clinician training. The clinician supervises, can stop the session, and stays accountable.</text>
+
+  <rect x="40" y="134" width="680" height="72" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="64" y="162" font-size="15" font-weight="600" fill="#1e3a8a">2 · Software</text>
+  <text x="64" y="186" font-size="13" fill="#1e3a8a">Deterministic wherever possible. The AI component proposes; it never actuates directly.</text>
+
+  <rect x="40" y="216" width="680" height="72" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="64" y="244" font-size="15" font-weight="600" fill="#7c2d12">1 · Hardware</text>
+  <text x="64" y="268" font-size="13" fill="#7c2d12">Physical and electrical limits that software cannot override.</text>
+</svg>

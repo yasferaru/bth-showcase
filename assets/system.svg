@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>BTH system at block level</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect width="880" height="430" rx="12" fill="#ffffff"/>
+  <text x="440" y="34" text-anchor="middle" font-size="19" font-weight="600" fill="#111827">BTH at block level</text>
+
+  <!-- sensing domain -->
+  <rect x="24" y="60" width="250" height="250" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="149" y="84" text-anchor="middle" font-size="14" font-weight="600" fill="#065f46">Sensing domain (isolated)</text>
+  <g font-size="13" fill="#111827">
+    <rect x="44" y="98" width="210" height="34" rx="6" fill="#ffffff" stroke="#6ee7b7"/><text x="149" y="120" text-anchor="middle">Electrodermal activity (EDA)</text>
+    <rect x="44" y="140" width="210" height="34" rx="6" fill="#ffffff" stroke="#6ee7b7"/><text x="149" y="162" text-anchor="middle">Heart rate variability (chest strap)</text>
+    <rect x="44" y="182" width="210" height="34" rx="6" fill="#ffffff" stroke="#6ee7b7"/><text x="149" y="204" text-anchor="middle">Respiration</text>
+    <rect x="44" y="224" width="210" height="34" rx="6" fill="#ffffff" stroke="#6ee7b7"/><text x="149" y="246" text-anchor="middle">Skin temperature</text>
+  </g>
+  <text x="149" y="290" text-anchor="middle" font-size="12" fill="#065f46">own controller and supply</text>
+
+  <!-- isolation barrier -->
+  <line x1="300" y1="56" x2="300" y2="316" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="300" y="332" text-anchor="middle" font-size="11" fill="#6b7280">galvanic isolation</text>
+
+  <!-- software -->
+  <rect x="330" y="60" width="220" height="250" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="440" y="84" text-anchor="middle" font-size="14" font-weight="600" fill="#1e3a8a">Software</text>
+  <g font-size="13" fill="#111827">
+    <rect x="350" y="98" width="180" height="34" rx="6" fill="#ffffff" stroke="#93c5fd"/><text x="440" y="120" text-anchor="middle">Acquire and condition</text>
+    <rect x="350" y="148" width="180" height="34" rx="6" fill="#ffffff" stroke="#93c5fd"/><text x="440" y="170" text-anchor="middle">Estimate state</text>
+    <rect x="350" y="198" width="180" height="34" rx="6" fill="#ffffff" stroke="#93c5fd"/><text x="440" y="220" text-anchor="middle">Per-patient model: propose</text>
+    <rect x="350" y="248" width="180" height="34" rx="6" fill="#fef2f2" stroke="#f87171"/><text x="440" y="270" text-anchor="middle">Deterministic safety check</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="440" y1="132" x2="440" y2="146"/><line x1="440" y1="182" x2="440" y2="196"/><line x1="440" y1="232" x2="440" y2="246"/>
+  </g>
+
+  <!-- actuation domain -->
+  <rect x="580" y="60" width="276" height="250" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="718" y="84" text-anchor="middle" font-size="14" font-weight="600" fill="#7c2d12">Actuation domain</text>
+  <g font-size="13" fill="#111827">
+    <rect x="600" y="98" width="236" height="34" rx="6" fill="#ffffff" stroke="#fcd34d"/><text x="718" y="120" text-anchor="middle">Magnetic encoder + IMU</text>
+    <rect x="600" y="148" width="236" height="34" rx="6" fill="#ffffff" stroke="#fcd34d"/><text x="718" y="170" text-anchor="middle">Elbow and shoulder</text>
+    <rect x="600" y="198" width="236" height="34" rx="6" fill="#ffffff" stroke="#fcd34d"/><text x="718" y="220" text-anchor="middle">Brushless gimbal motor</text>
+    <rect x="600" y="248" width="236" height="34" rx="6" fill="#ffffff" stroke="#fcd34d"/><text x="718" y="270" text-anchor="middle">Motor controller (closed loop)</text>
+  </g>
+  <rect x="600" y="288" width="236" height="16" rx="4" fill="#fde68a"/><text x="718" y="300" text-anchor="middle" font-size="11" fill="#7c2d12">hardware limits</text>
+
+  <!-- flows -->
+  <g stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#a)">
+    <line x1="274" y1="115" x2="348" y2="115"/>
+    <line x1="530" y1="265" x2="598" y2="265"/>
+    <line x1="600" y1="115" x2="532" y2="115"/>
+  </g>
+  <g stroke="#4b5563" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="718" y1="248" x2="718" y2="234"/><line x1="718" y1="198" x2="718" y2="184"/><line x1="718" y1="148" x2="718" y2="134"/>
+  </g>
+  <text x="311" y="108" font-size="11" fill="#6b7280">signals</text>
+  <text x="565" y="108" font-size="11" fill="#6b7280" text-anchor="middle">motion</text>
+  <text x="565" y="258" font-size="11" fill="#6b7280" text-anchor="middle">setpoint</text>
+
+  <!-- clinician -->
+  <rect x="240" y="352" width="400" height="52" rx="10" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="440" y="374" text-anchor="middle" font-size="14" font-weight="600" fill="#4c1d95">Trained clinician</text>
+  <text x="440" y="393" text-anchor="middle" font-size="12" fill="#4c1d95">supervises, can stop the session, stays accountable</text>
+  <line x1="440" y1="352" x2="440" y2="312" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>

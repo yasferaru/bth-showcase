@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" width="880" height="330" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>EDA signal chain: design principles and the problems they answer</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect width="880" height="330" rx="12" fill="#ffffff"/>
+  <text x="440" y="32" text-anchor="middle" font-size="19" font-weight="600" fill="#111827">EDA signal chain: principles, not a schematic</text>
+
+  <!-- problems -->
+  <g font-size="12" fill="#991b1b">
+    <rect x="30" y="56" width="150" height="40" rx="6" fill="#fef2f2" stroke="#fca5a5"/><text x="105" y="74" text-anchor="middle">Motion artefacts,</text><text x="105" y="89" text-anchor="middle">sweat, temperature</text>
+    <rect x="200" y="56" width="150" height="40" rx="6" fill="#fef2f2" stroke="#fca5a5"/><text x="275" y="74" text-anchor="middle">Electrode</text><text x="275" y="89" text-anchor="middle">polarisation</text>
+    <rect x="370" y="56" width="150" height="40" rx="6" fill="#fef2f2" stroke="#fca5a5"/><text x="445" y="74" text-anchor="middle">Motor PWM</text><text x="445" y="89" text-anchor="middle">coupling</text>
+    <rect x="540" y="56" width="150" height="40" rx="6" fill="#fef2f2" stroke="#fca5a5"/><text x="615" y="74" text-anchor="middle">Aliasing of</text><text x="615" y="89" text-anchor="middle">out-of-band noise</text>
+    <rect x="710" y="56" width="150" height="40" rx="6" fill="#fef2f2" stroke="#fca5a5"/><text x="785" y="74" text-anchor="middle">Responses too small</text><text x="785" y="89" text-anchor="middle">to resolve</text>
+  </g>
+  <g stroke="#dc2626" stroke-width="1.5" marker-end="url(#r)">
+    <line x1="105" y1="96" x2="105" y2="134"/><line x1="275" y1="96" x2="275" y2="134"/><line x1="445" y1="96" x2="445" y2="134"/><line x1="615" y1="96" x2="615" y2="134"/><line x1="785" y1="96" x2="785" y2="134"/>
+  </g>
+
+  <!-- chain -->
+  <g font-size="13" fill="#111827">
+    <rect x="30" y="136" width="150" height="56" rx="8" fill="#ecfdf5" stroke="#10b981"/><text x="105" y="160" text-anchor="middle">Ag/AgCl electrodes,</text><text x="105" y="178" text-anchor="middle">isotonic gel</text>
+    <rect x="200" y="136" width="150" height="56" rx="8" fill="#ecfdf5" stroke="#10b981"/><text x="275" y="160" text-anchor="middle">Constant-voltage</text><text x="275" y="178" text-anchor="middle">DC measurement</text>
+    <rect x="370" y="136" width="150" height="56" rx="8" fill="#ecfdf5" stroke="#10b981"/><text x="445" y="160" text-anchor="middle">Isolated front-end</text><text x="445" y="178" text-anchor="middle">and supply</text>
+    <rect x="540" y="136" width="150" height="56" rx="8" fill="#ecfdf5" stroke="#10b981"/><text x="615" y="160" text-anchor="middle">Hardware</text><text x="615" y="178" text-anchor="middle">anti-alias filter</text>
+    <rect x="710" y="136" width="150" height="56" rx="8" fill="#ecfdf5" stroke="#10b981"/><text x="785" y="160" text-anchor="middle">External</text><text x="785" y="178" text-anchor="middle">16-bit ADC</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="180" y1="164" x2="198" y2="164"/><line x1="350" y1="164" x2="368" y2="164"/><line x1="520" y1="164" x2="538" y2="164"/><line x1="690" y1="164" x2="708" y2="164"/>
+  </g>
+  <line x1="785" y1="192" x2="785" y2="226" stroke="#4b5563" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- context recorded -->
+  <rect x="30" y="228" width="830" height="72" rx="8" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="445" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#1e3a8a">Recorded alongside EDA so artefacts can be identified, not guessed</text>
+  <text x="445" y="274" text-anchor="middle" font-size="13" fill="#1e3a8a">respiration · skin temperature · arm motion (IMU) · joint angle (encoder) · motor activity</text>
+  <text x="445" y="292" text-anchor="middle" font-size="11" fill="#6b7280">Principles from Boucsein, Electrodermal Activity (2012), ch. 2. Motor control runs on a separate controller.</text>
+</svg>
